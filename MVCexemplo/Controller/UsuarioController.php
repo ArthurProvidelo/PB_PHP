@@ -1,6 +1,6 @@
 <?php
 
-session_start(); // "banco de dados
+session_start(); // "banco de dados"
 require_once "./Model/UsuarioModel.php";
 
 class UsuarioController{

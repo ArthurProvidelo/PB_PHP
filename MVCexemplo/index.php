@@ -14,7 +14,7 @@ switch ($route){
         $usuarioController->cadastrar();
         break;
 
-    case "ususario/listar":
+    case "usuario/listar":
         $usuarioController->listarUsuarios();
         break;
 

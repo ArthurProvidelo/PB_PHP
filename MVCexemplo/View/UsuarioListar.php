@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/PB_PHP/MVCexemplo/usuario/telaCadastro">Ir para tela Cadastar</a>
     <h2>Usários</h2>
     <table border="1">
         <tr>
             <th>Nome</th>
             <th>Email</th>
-            <th>Ações</th>
+            <th>Ações</th>  
         </tr>
         <?php foreach($usuarios as $u): ?>
             <tr>
