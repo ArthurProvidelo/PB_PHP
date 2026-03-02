@@ -38,5 +38,10 @@ class Usuario{
         }
     }
 
+    public static function excluir($id){
+        if(isset($_SESSION['usuarios'][$id])){ // verifica se o usuário existe
+            unset($_SESSION['usuarios'][$id]); // remove o usuário
+        }
+    }
 
 }
