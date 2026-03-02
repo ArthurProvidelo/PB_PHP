@@ -1,6 +1,5 @@
 <?php
 
-
 session_start(); //'banco de dados' para salvar informações
 require_once "./Model/produtosModel.php";
 
@@ -15,8 +14,8 @@ class ProdutosController{
         $quantidade = $_POST['quantidade'];
         $validade = $_POST['validade'];
 
-        $usuario = new Produtos($nome, $preco, $quantidade, $validade);
-        $usuario->salvar();
+        $produtos = new Produtos($nome, $preco, $quantidade, $validade);
+        $produtos->salvar();
         // redirecionar depois salvar
         header('Location: /PB_PHP/atividade01_MVC/produtos/listar');
         exit;
@@ -26,6 +25,25 @@ class ProdutosController{
         $produtos = Produtos::listar();
         require "View/produtosListar.php";
     }
+
+    public function telaEditar(){
+        $produtos = Produtos::buscar($_GET['id']);
+        require "View/produtosEditar.php";
+    }
+
+    public function atualizar(){
+        $produtos = new Produtos($_POST['nome'], $_POST['preco'], $_POST['quantidade'], $_POST['validade']);
+        $produtos->atualizar($_GET['id']);
+        header('Location: /PB_PHP/atividade01_MVC/produtos/telaEditar?id='.($_GET['id']));
+        exit;
+    }
+
+    public function excluir(){
+        Produtos::excluir($_GET['id']);
+        header('Location: /PB_PHP/atividade01_MVC/produtos/listar');
+        exit;
+    }
+
 }
 
 ?>

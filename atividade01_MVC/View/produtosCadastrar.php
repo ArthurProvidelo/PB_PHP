@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema do Mercadinho 🛒</title>
+    <title>Sistema de Cadastro 🛒</title>
 </head>
 <body>
     <a href="/PB_PHP/atividade01_MVC/produtos/listar">Ir para tela Listar</a>
-    <form method="POST" action="salvar">
+    <form style="font-family: Arial, Helvetica, sans-serif; background-color: lightgray; align-items: center; padding: 20px; margin-top: 20px; position:absolute; border: 2px solid black; ; border-radius:10px;" method="POST" action="salvar">
         Nome:
-        <input type="text" name="nome" placeholder="Nome do produto" require><br>
+        <input style="border-radius: 5px;" type="text" name="nome" placeholder="Nome do produto" require><br>
         Preço:
-        <input type="number" name="preco" placeholder="Preço" require><br>
+        <input style="border-radius: 5px;" type="number" name="preco" placeholder="Preço" require><br>
         Quantidade:
-        <input type="number" name="quantidade" placeholder="Quantidade" require><br>
+        <input style="border-radius: 5px;" type="number" name="quantidade" placeholder="Quantidade" require><br>
         Validade:
-        <input type="date" name="validade" placeholder="validade" require><br>
-        <button type="submit">Cadastrar</button>
+        <input style="border-radius: 5px;" type="date" name="validade" placeholder="validade" require><br>
+        <button style="text-align: center; background-color: lightgreen; border-radius: 20px; border-color: green;" type="submit">Cadastrar</button>
     </form>
 </body>
 </html>
